@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 
+app.set('view engine', 'ejs');
+
 app.get("/", (req, res, next) => {
-  res.send("Hola mundo!");
+  res.render("index");
 });
 
 app.get("/pokemon", (req, res, next) => {
